@@ -1,0 +1,1 @@
+# firefox-default-window-container
