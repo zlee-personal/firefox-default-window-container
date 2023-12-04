@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Default Container Per Window",
+  "version": "1.0",
+  "description": "Set a default container for each window in Firefox.",
+  "permissions": [
+    "contextualIdentities",
+    "storage",
+    "tabs",
+    "webNavigation",
+    "management",
+    "cookies",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "ext+newtabcontainer",
+      "name": "Open New Tab in Container",
+      "uriTemplate": "/opener.html#%s"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}
+
